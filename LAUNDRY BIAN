@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Laundry Bersih Cepat</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      line-height: 1.6;
+      background: #f5f7fa;
+      color: #333;
+    }
+
+    header {
+      background: linear-gradient(135deg, #2d89ef, #1b5cbf);
+      color: white;
+      padding: 60px 20px;
+      text-align: center;
+    }
+    header h1 { font-size: 2.5rem; margin-bottom: 10px; }
+    header p { font-size: 1.2rem; }
+
+    nav {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      background: #1b5cbf;
+      padding: 10px;
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 5px 15px;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+    nav a:hover { color: #ffd700; }
+
+    .container {
+      width: 90%;
+      max-width: 1200px;
+      margin: 30px auto;
+      display: grid;
+      gap: 20px;
+    }
+
+    section {
+      background: white;
+      padding: 25px;
+      border-radius: 12px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.08);
+    }
+    section h2 {
+      color: #2d89ef;
+      margin-bottom: 15px;
+    }
+
+    .services ul {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 10px;
+      list-style: none;
+    }
+    .services li {
+      background: #f0f4ff;
+      padding: 12px;
+      border-radius: 8px;
+      text-align: center;
+      font-weight: bold;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 10px;
+    }
+    th, td {
+      padding: 12px;
+      border: 1px solid #ddd;
+      text-align: center;
+    }
+    th {
+      background: #2d89ef;
+      color: white;
+    }
+    tr:nth-child(even) { background: #f9f9f9; }
+
+    .btn {
+      display: inline-block;
+      padding: 12px 18px;
+      background: #2d89ef;
+      color: white;
+      border-radius: 8px;
+      text-decoration: none;
+      transition: 0.3s;
+    }
+    .btn:hover { background: #1b5cbf; }
+
+    form {
+      display: grid;
+      gap: 12px;
+    }
+    input, select, textarea {
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      width: 100%;
+    }
+    textarea { resize: vertical; }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: #2d89ef;
+      color: white;
+      margin-top: 30px;
+    }
+
+    @media (max-width: 768px) {
+      header h1 { font-size: 2rem; }
+      header p { font-size: 1rem; }
+      nav { flex-direction: column; }
+      nav a { margin: 8px 0; }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Laundry Bersih Cepat</h1>
+    <p>Cuci - Setrika - Antar Jemput</p>
+  </header>
+
+  <nav>
+    <a href="#services">Layanan</a>
+    <a href="#pricing">Harga</a>
+    <a href="#about">Tentang</a>
+    <a href="#contact">Kontak</a>
+  </nav>
+
+  <div class="container">
+    <section id="services" class="services">
+      <h2>Layanan Kami</h2>
+      <ul>
+        <li>Cuci & Lipat</li>
+        <li>Cuci & Setrika</li>
+        <li>Cuci Karpet</li>
+        <li>Express 6 Jam</li>
+      </ul>
+    </section>
+
+    <section id="pricing" class="pricing">
+      <h2>Daftar Harga</h2>
+      <table>
+        <tr><th>Layanan</th><th>Harga</th></tr>
+        <tr><td>Cuci + Lipat (per Kg)</td><td>Rp 7.000</td></tr>
+        <tr><td>Cuci + Setrika (per Kg)</td><td>Rp 10.000</td></tr>
+        <tr><td>Cuci Karpet (per m²)</td><td>Rp 25.000</td></tr>
+        <tr><td>Express 6 Jam (per Kg)</td><td>Rp 15.000</td></tr>
+      </table>
+    </section>
+
+    <section id="about" class="about">
+      <h2>Tentang Kami</h2>
+      <p>Kami adalah jasa laundry profesional dengan layanan cepat, bersih, dan terpercaya. 
+         Dengan pengalaman lebih dari 5 tahun, kami siap membantu kebutuhan laundry Anda.</p>
+    </section>
+
+    <section id="contact" class="contact">
+      <h2>Kontak & Order</h2>
+      <p>📍 Alamat: Jl. Melati No. 12, Jakarta</p>
+      <p>📞 Telepon: 0812-3456-7890</p>
+
+      <!-- FORM ORDER -->
+      <form id="orderForm">
+        <input type="text" id="nama" placeholder="Nama Anda" required>
+        <input type="text" id="alamat" placeholder="Alamat Lengkap" required>
+        <input type="tel" id="telepon" placeholder="Nomor HP/WhatsApp" required>
+        <select id="layanan" required>
+          <option value="">-- Pilih Layanan --</option>
+          <option value="Cuci + Lipat">Cuci + Lipat</option>
+          <option value="Cuci + Setrika">Cuci + Setrika</option>
+          <option value="Cuci Karpet">Cuci Karpet</option>
+          <option value="Express 6 Jam">Express 6 Jam</option>
+        </select>
+        <textarea id="catatan" rows="3" placeholder="Catatan tambahan (opsional)"></textarea>
+        <button type="submit" class="btn">Kirim Pesanan via WhatsApp</button>
+      </form>
+    </section>
+  </div>
+
+  <footer>
+    <p>© 2025 Laundry Bersih Cepat - Semua Hak Dilindungi</p>
+  </footer>
+
+  <script>
+    document.getElementById("orderForm").addEventListener("submit", function(e){
+      e.preventDefault();
+
+      const nama = document.getElementById("nama").value;
+      const alamat = document.getElementById("alamat").value;
+      const telepon = document.getElementById("telepon").value;
+      const layanan = document.getElementById("layanan").value;
+      const catatan = document.getElementById("catatan").value;
+
+      const pesan = `Halo, saya ingin order laundry:%0A
+Nama: ${nama}%0A
+Alamat: ${alamat}%0A
+No HP: ${telepon}%0A
+Layanan: ${layanan}%0A
+Catatan: ${catatan}`;
+
+      const nomorTujuan = "6281234567890"; // ganti dengan nomor WA kamu
+      const url = `https://wa.me/${nomorTujuan}?text=${pesan}`;
+
+      window.open(url, "_blank");
+    });
+  </script>
+
+</body>
+</html>
